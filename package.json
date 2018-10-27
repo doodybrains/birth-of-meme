@@ -1,0 +1,14 @@
+{
+  "name": "compotypo-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-escape-sequences": "^4.0.0"
+  }
+}
