@@ -15,12 +15,15 @@ let all = [
   'i want to download', 'even as', 'do i look more like i do in the mirror or in pictures?'
 ];
 
+let count = 0;
+
 setup();
 
 function setup() {
   const interval = setInterval(function() {
     const ranSentence = randomizeArray(all);
-    
+    count ++;
+    console.log(count);
     // position text between 0 and 30 rows, 0 and 80 columns
     process.stdout.write(antsyPosition(soRandom(-30), soRandom(80)));
     process.stdout.write(antsyFormat(ranSentence, 'gray'));
@@ -33,23 +36,23 @@ function setup() {
 function makeAText(ranSentence) {
   switch(ranSentence) {
     case 'has anyone':
-      highlightPhrase(14,33,'has anyone','red');
+      if (count > 20) highlightPhrase(14,33,'has anyone','red');
       break;
     case 'really been':
-      highlightPhrase(15,37,'really been','green');
+    if (count > 40) highlightPhrase(15,37,'really been','green');
       break;
     case 'far':
-      highlightPhrase(16,35,'far','yellow');
+    if (count > 60) highlightPhrase(16,35,'far','yellow');
     case 'even as':
-      highlightPhrase(17,40,'evan as','blue');
+    if (count > 80) highlightPhrase(17,40,'evan as','blue');
     case 'decided to use':
-      highlightPhrase(18,45,'decided to use','magenta');
+    if (count > 90) highlightPhrase(18,45,'decided to use','magenta');
     case 'even go':
-      highlightPhrase(19,42,'even go','cyan');
+    if (count > 100) highlightPhrase(19,42,'even go','cyan');
     case 'want to do':
-      highlightPhrase(20,42,'want to do','red');
+    if (count > 110) highlightPhrase(20,42,'want to do','red');
     case 'look more like?':
-      highlightPhrase(21,30,'look more like?','green');
+    if (count > 120) highlightPhrase(21,30,'look more like?','green');
   }
 }
 
