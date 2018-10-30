@@ -43,16 +43,22 @@ function makeAText(ranSentence) {
       break;
     case 'far':
     if (count > 60) highlightPhrase(16,35,'far','yellow');
+      break;
     case 'even as':
     if (count > 80) highlightPhrase(17,40,'evan as','blue');
+      break;
     case 'decided to use':
     if (count > 90) highlightPhrase(18,45,'decided to use','magenta');
+      break;
     case 'even go':
     if (count > 100) highlightPhrase(19,42,'even go','cyan');
+      break;
     case 'want to do':
     if (count > 110) highlightPhrase(20,42,'want to do','red');
+      break;
     case 'look more like?':
     if (count > 120) highlightPhrase(21,30,'look more like?','green');
+      break;
   }
 }
 
