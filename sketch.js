@@ -23,7 +23,7 @@ function setup() {
   const interval = setInterval(function() {
     const ranSentence = randomizeArray(all);
     count ++;
-    console.log(count);
+
     // position text between 0 and 30 rows, 0 and 80 columns
     process.stdout.write(antsyPosition(soRandom(-30), soRandom(80)));
     process.stdout.write(antsyFormat(ranSentence, 'gray'));
